@@ -26,7 +26,7 @@ module.exports = appInfo => {
       port: '3306',
       user: 'root',
       password: '',
-      socketPath: '/var/lib/mysql/mysql.sock',
+      // socketPath: '/var/lib/mysql/mysql.sock',
       database: 'test'
 
     }
@@ -36,18 +36,18 @@ module.exports = appInfo => {
       enable: false
     }
   }
-  config.cluster = {
-    listen: {
-      port: 8080
-    }
-  }
+  // config.cluster = {
+  //   listen: {
+  //     port: 8080
+  //   }
+  // }
   config.cors = {
     origin: '*',
     allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
   }
   // add your user config here
   const userConfig = {
-    // myAppName: 'egg',
+    myAppName: 'egg',
   };
 
   return {
